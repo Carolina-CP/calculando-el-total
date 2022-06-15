@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Claculando el Total</title>
+</head>
+<body>
+    
+   <div class="contenedor">
+
+    <div class="producto"> 
+        <img class="img-producto" src="https://www.amd.com/system/files/2020-10/640951-gaming-laptop-msi-alpha-front-facing-1260x709.png" alt="">
+        <p class="titulo-producto">Laptop Gamer AMD</p>
+        
+        <input id="input-cantidad" type="text" placeholder="Cantidad">
+        <input id="input-color" type="text" placeholder="Color">
+        
+        <p class="precio-producto">Precio: $400.000</p>
+        
+        <button id="btn-1" class="btn-producto" onclick="
+        total = document.querySelector('#input-cantidad')
+        cantidad = document.querySelector('#input-cantidad')
+        color = document.querySelector('#input-color')
+
+        resultadoTotal = document.querySelector('#resultado-total')
+        resultadoCantidad = document.querySelector('#resultado-cantidad')
+        resultadoColor = document.querySelector('#resultado-color')
+        
+        resultadoTotal.innerHTML = 400000 * cantidad.value
+        resultadoCantidad.innerHTML = cantidad.value
+        resultadoColor.style.backgroundColor = color.value
+        ">Calcular Total </button>
+
+        
+
+    </div>
+
+    <div class="resumen">
+        <h3>Total: $ <span id="resultado-total" >0</span></h3>
+        <h3>Cantidad: <span id="resultado-cantidad" >0</span></h3>
+        <h3>Color: <div id="resultado-color" class="color"></div> </h3>
+        
+        
+    </div>
+
+
+   </div>
+
+ <script>
+    console.log( document.querySelector('#resultado-total'))
+ </script>
+
+</body>
+</html>
